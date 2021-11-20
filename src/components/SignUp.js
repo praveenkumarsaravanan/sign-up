@@ -5,7 +5,6 @@ const SignUp = () => {
     const [firstName, setFirstName] = useState("");
     const [password, setPassword] = useState("");
     const [email, setEmail] = useState("");
-    const [redirect,serRedirect] = useState(false);
 
     const handleOnSubmit = (event) => {
         // Write Redirect Code to Success Page
