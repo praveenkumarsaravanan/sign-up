@@ -4,7 +4,6 @@
 
 This is a Sign Up service, where a user can register for an imaginary application. It consists of Sign Up feature and a confirmation based on registration.
 
----
 <br/>
 
 ## To run this service in local / development environment
@@ -54,8 +53,6 @@ Sign Up app is ready to be deployed!
 In the project directory, run:
 
 ### `npm run deploy`
-
----
 
 <br/>
 
