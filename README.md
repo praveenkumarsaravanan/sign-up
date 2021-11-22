@@ -14,7 +14,7 @@ In the project directory, run:
 
 Installs all the dependencies that the project requires.
 
-### `npm start`
+### `npm run start`
 
 Runs the app in the development mode.\
 Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
@@ -28,7 +28,7 @@ You will also see any lint errors in the console.
 
 In the project directory, run:
 
-### `npm test`
+### `npm run test`
 
 Launches the test runner in the interactive watch mode.\
 See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.

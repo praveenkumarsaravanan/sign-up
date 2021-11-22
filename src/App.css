@@ -38,6 +38,10 @@ input {
   font-weight: bold;
 }
 
+.header-span-title {
+  display: block;
+}
+
 .parent-div-container {
   min-height: 100vh;
   background: #f5f3f3;
@@ -57,10 +61,6 @@ input {
 
 .font-weight-400 {
   font-weight: 400;
-}
-
-.title-txt {
-  margin: 0;
 }
 
 .txt-label {
@@ -85,7 +85,14 @@ h1 {
   min-height: 4vh;
 }
 
+.form-field {
+  font-size: 1em;
+  margin: 1em 0em 0.5em 0em;
+  font-weight: bold;
+}
+
 @media screen and (max-width: 450px) {
+
   .txt {
     font-size: 0.85em;
   }
@@ -96,5 +103,9 @@ h1 {
 
   .btn {
     min-height: 2.5vh;
+  }
+
+  .form-field {
+    font-size: 0.85em;
   }
 }

@@ -33,29 +33,33 @@ const SignUp = () => {
     return (
         <div className="parent-div-container">
             <div className="child-div-container">
-                <header>
-                    <h1 className="title-txt font-weight-400">Let's</h1>
-                    <h1 className="title-txt">Sign Up</h1>
-                </header>
+                <h1 className="font-weight-400">Let's<span className="txt-bold header-span-title" >Sign Up</span></h1>
                 <div className="txt">
                     <p>Use the form below to sign up for this super awesome service. You're only a few steps away!</p>
                 </div>
                 <form onSubmit={handleOnSubmit}>
                     <fieldset>
-                        <label>
-                            <p className="txt txt-label txt-bold">First Name</p>
-                            <input id="firstName" type="text" label="First Name" value={firstName} onChange={handlefirstNameOnChange} required aria-required data-testid="firstName" />
-                        </label>
-                        <label>
-                            <p className="txt txt-label txt-bold">Email Address</p>
-                            <input id="email" type="email" label="Email Address" value={email} onChange={handleEmailOnChange} required aria-required data-testid="email" />
-                        </label>
-                        <label>
-                            <p className="txt txt-label txt-bold">Password</p>
-                            <input id="password" type="password" label="Password" value={password} onChange={handlePasswordOnChange} required aria-required data-testid="password" />
-                        </label>
+                        <div className="form-field">
+                            <label>
+                                First Name
+                                <input id="firstName" type="text" label="First Name" value={firstName} onChange={handlefirstNameOnChange} required aria-required data-testid="firstName" />
+                            </label>
+                        </div>
+                        <div className="form-field">
+                            <label>
+                                Email Address
+                                <input id="email" type="email" label="Email Address" value={email} onChange={handleEmailOnChange} required aria-required data-testid="email" />
+                            </label>
+                        </div>
+                        <div className="form-field">
+                            <label>
+                                Password
+                                <input id="password" type="password" label="Password" value={password} onChange={handlePasswordOnChange} required aria-required data-testid="password" />
+                            </label>
+                        </div>
+                        <button type="submit" value="Submit" className="btn btn-red btn-right" data-testid="signUpButton">Sign Up</button>
                     </fieldset>
-                    <button type="submit" value="Submit" className="btn btn-red btn-right" data-testid="signUpButton">Sign Up</button>
+
                 </form>
             </div>
         </div>
