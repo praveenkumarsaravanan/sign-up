@@ -1,6 +1,5 @@
 {
   "name": "sign-up",
-  "homepage": "https://praveenksaravanan.github.io/sign-up",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
