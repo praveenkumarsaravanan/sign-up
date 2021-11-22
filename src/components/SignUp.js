@@ -1,34 +1,38 @@
+import { sign } from 'crypto';
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 
 const SignUp = () => {
 
-    const [firstName, setFirstName] = useState("");
-    const [password, setPassword] = useState("");
-    const [email, setEmail] = useState("");
+    const [signUpForm, setSignUpForm] = useState({
+        firstName: '',
+        password: '',
+        email: '',
+    });
+
+    /* Navigate hook used to redirect to the successs component */
     const navigate = useNavigate();
 
-    const handleOnSubmit = (event) => {
-        event.preventDefault();
+    /*
+        Handles Redirect to the /success page and pass firstName & email address to the success component
+    */
+    const handleOnSubmit = () => {
         navigate('/success', {
             state: {
-                firstName: firstName,
-                email: email
+                firstName: signUpForm.firstName,
+                email: signUpForm.email
             }
         });
+        return;
     };
 
-    const handleEmailOnChange = (e) => {
-        setEmail(e.target.value);
-    }
-
-    const handlePasswordOnChange = (e) => {
-        setPassword(e.target.value);
-    }
-
-    const handlefirstNameOnChange = (e) => {
-        setFirstName(e.target.value);
-    }
+    /* Assign the User Entered Value to the State and the field */
+    const handleChange = event => {
+        setSignUpForm({
+            ...signUpForm,
+            [event.target.name]: event.target.value,
+        });
+    };
 
     return (
         <div className="parent-div-container">
@@ -42,24 +46,23 @@ const SignUp = () => {
                         <div className="form-field">
                             <label>
                                 First Name
-                                <input id="firstName" type="text" label="First Name" value={firstName} onChange={handlefirstNameOnChange} required aria-required data-testid="firstName" />
+                                <input id="firstName" type="text" label="First Name" name="firstName" value={signUpForm.firstName} onChange={handleChange} required aria-required data-testid="firstName" />
                             </label>
                         </div>
                         <div className="form-field">
                             <label>
                                 Email Address
-                                <input id="email" type="email" label="Email Address" value={email} onChange={handleEmailOnChange} required aria-required data-testid="email" />
+                                <input id="email" type="email" label="Email Address" name="email" value={signUpForm.email} onChange={handleChange} required aria-required data-testid="email" />
                             </label>
                         </div>
                         <div className="form-field">
                             <label>
                                 Password
-                                <input id="password" type="password" label="Password" value={password} onChange={handlePasswordOnChange} required aria-required data-testid="password" />
+                                <input id="password" type="password" label="Password" name="password" value={signUpForm.password} onChange={handleChange} required aria-required data-testid="password" />
                             </label>
                         </div>
                         <button type="submit" value="Submit" className="btn btn-red btn-right" data-testid="signUpButton">Sign Up</button>
                     </fieldset>
-
                 </form>
             </div>
         </div>

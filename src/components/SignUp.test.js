@@ -28,8 +28,8 @@ test('Sign Up using the Service', () => {
   userEvent.type(passwordElement, 'password@123');
   // Assert password has text content 'password@123'
   expect(passwordElement).toHaveValue('password@123');
-  
-  
+
+
   // Extract the emailAddress component
   const emailAddressElement = screen.getByTestId(/email/i);
   // Simulate typing 'be.praveen@gmail.com'
