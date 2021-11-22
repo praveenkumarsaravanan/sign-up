@@ -45,7 +45,7 @@ const SignUp = () => {
                         <div className="form-field">
                             <label>
                                 First Name
-                                <input id="firstName" type="text" label="First Name" name="firstName" value={signUpForm.firstName} onChange={handleChange} required aria-required data-testid="firstName" />
+                                <input autoFocus id="firstName" type="text" label="First Name" name="firstName" value={signUpForm.firstName} onChange={handleChange} required aria-required data-testid="firstName" />
                             </label>
                         </div>
                         <div className="form-field">
