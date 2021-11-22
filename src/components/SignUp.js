@@ -33,7 +33,7 @@ const SignUp = () => {
     return (
         <div className="parent-div-container">
             <div className="child-div-container">
-                <h1 className="font-weight-400">Let's<span className="txt-bold header-span-title" >Sign Up</span></h1>
+                <h1><span className="font-weight-normal">Let's</span><span className="header-title-block">Sign Up</span></h1>
                 <div className="txt">
                     <p>Use the form below to sign up for this super awesome service. You're only a few steps away!</p>
                 </div>

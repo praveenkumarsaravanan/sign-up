@@ -9,7 +9,8 @@ const Success = () => {
     return (
         state ? <div className="parent-div-container">
             <div className="child-div-container">
-                <h1 className="font-weight-400">Welcome<span className="txt-bold header-span-title" >{state.firstName}!</span></h1>
+            <h1><span className="font-weight-normal">Welcome</span><span className="header-title-block">{state.firstName}!</span></h1>
+                
                 <div className="txt">
                     <p>You have been registered for this awesome service.</p>
                     <p>Please check your email listed below for instructions.</p>

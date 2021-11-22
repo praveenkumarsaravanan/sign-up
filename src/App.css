@@ -38,7 +38,7 @@ input {
   font-weight: bold;
 }
 
-.header-span-title {
+.header-title-block {
   display: block;
 }
 
@@ -59,8 +59,8 @@ input {
   max-width: 450px;
 }
 
-.font-weight-400 {
-  font-weight: 400;
+.font-weight-normal {
+  font-weight: normal
 }
 
 .txt-label {
