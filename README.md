@@ -2,7 +2,7 @@
 
 ## Published at https://praveenksaravanan.github.io/sign-up
 
-This is a Sign Up service, where a user can register for an imaginary application. It consists of Sign Up feature and a confirmation based on registration.
+This is a responsive web app for the Sign Up service, where a user can register for an imaginary application. It consists of Sign Up feature and a confirmation based on the registration.
 
 <br/>
 
@@ -53,6 +53,10 @@ Sign Up app is ready to be deployed!
 In the project directory, run:
 
 ### `npm run deploy`
+
+Deploys the project in to Github pages and the build files are published to the `gh-pages` branch in the repo. 
+
+Published site will be available at https://praveenksaravanan.github.io/sign-up 
 
 <br/>
 
