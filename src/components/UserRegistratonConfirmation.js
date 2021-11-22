@@ -2,9 +2,9 @@ import React from 'react';
 
 import { Navigate, useLocation } from 'react-router-dom';
 
-const Success = () => {
+const UserRegistratonConfirmation = () => {
 
-    /* UseLocation hook is used to retrieve the state params from the signUp component */
+    /* UseLocation hook is used to retrieve the state params from the UserRegistration component */
     const { state } = useLocation();
 
     return (
@@ -22,4 +22,4 @@ const Success = () => {
     );
 }
 
-export default Success;
+export default UserRegistratonConfirmation;

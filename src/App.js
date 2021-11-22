@@ -1,13 +1,13 @@
 import './App.css';
-import SignUp from './components/SignUp';
-import Success from './components/Success';
+import UserRegistraton from './components/UserRegistraton';
+import UserRegistratonConfirmation from './components/UserRegistratonConfirmation';
 import { Route, Routes } from 'react-router-dom';
 
 function App() {
   return (
     <Routes>
-      <Route path="/" exact element={<SignUp />} />
-      <Route path="/success" exact element={<Success />} />
+      <Route path="/" exact element={<UserRegistraton />} />
+      <Route path="/success" exact element={<UserRegistratonConfirmation />} />
     </Routes>
   );
 }

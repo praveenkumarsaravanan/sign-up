@@ -11,7 +11,7 @@ it('render Sign Up Page', () => {
   expect(screen.getByRole('heading', { name: /Let's/i, name: /Sign up/i })).toBeInTheDocument();
 })
 
-it('Sign up for the service and render success screen', () => {
+it('Sign up for the service and render User Registration Confirmation screen', () => {
 
   render(<App />, {wrapper: BrowserRouter});
   // Extract the textbox component

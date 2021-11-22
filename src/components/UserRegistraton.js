@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 
-const SignUp = () => {
+const UserRegistraton = () => {
 
     const [user, setUser] = useState({
         firstName: '',
@@ -9,20 +9,22 @@ const SignUp = () => {
         email: '',
     });
 
-    /* Navigate hook used to redirect to the successs component */
+    /* Navigate hook used to redirect to the UserRegistrationConfirmation component */
     const navigate = useNavigate();
 
     /*
-        Handles Redirect to the /success page and pass firstName & email address to the success component
+        Handles Redirect to the /success page and pass firstName & email address to the UserRegistrationConfirmation component
     */
-    const handleOnSubmit = () => {
+    const handleOnSubmit = event => {
+        /* Tests throw console Error if preventDefault is called */
+        event.preventDefault();
         navigate('/success', {
             state: {
                 firstName: user.firstName,
                 email: user.email
             }
         });
-        return;
+
     };
 
     /* Assign the User Entered Value to the State and the field */
@@ -68,4 +70,4 @@ const SignUp = () => {
     );
 }
 
-export default SignUp;
+export default UserRegistraton;

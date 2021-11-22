@@ -1,5 +1,5 @@
 import { render, screen } from '@testing-library/react';
-import SignUp from './SignUp';
+import UserRegistraton from './UserRegistraton';
 import userEvent from '@testing-library/user-event';
 
 const mockNavigate = jest.fn();
@@ -14,7 +14,7 @@ jest.mock('react-router-dom', () => ({
 
 test('Sign Up using the Service', () => {
   // Render the component to test
-  render(<SignUp />);
+  render(<UserRegistraton />);
   // Extract the textbox component
   const firstNameElement = screen.getByTestId(/firstName/i);
   // Simulate typing 'PRAVEEN KUMAR'
@@ -40,7 +40,7 @@ test('Sign Up using the Service', () => {
 });
 
 test('renders all Input elements along with Labels', () => {
-  render(<SignUp />);
+  render(<UserRegistraton />);
 
   const firstNameLabel = screen.getByLabelText(/First Name/i);
   expect(firstNameLabel).toBeInTheDocument();
@@ -60,21 +60,21 @@ test('renders all Input elements along with Labels', () => {
 });
 
 test('renders helper Text', () => {
-  render(<SignUp />);
+  render(<UserRegistraton />);
   const helperText = screen.getByText(/Use the form below to sign up for this super awesome service. You're only a few steps away!/i, { selector: 'p' });
   expect(helperText).toBeInTheDocument();
 });
 
 
 test('renders Lets Sign Up Text', () => {
-  render(<SignUp />);
+  render(<UserRegistraton />);
   const heading = screen.getByRole('heading', { name: /Let's/i, name: /Sign up/i });
   expect(heading).toBeInTheDocument();
 });
 
 
-test('renders SignUp Button', () => {
-  render(<SignUp />);
+test('renders UserRegistraton Button', () => {
+  render(<UserRegistraton />);
   const signUpButton = screen.getByText(/Sign Up/i, { selector: 'button' });
   expect(signUpButton).toBeInTheDocument();
 });

@@ -1,5 +1,5 @@
 import { render, screen } from '@testing-library/react';
-import Success from './Success';
+import UserRegistratonConfirmation from './UserRegistratonConfirmation';
 
 jest.mock('react-router-dom', () => ({
     ...jest.requireActual('react-router-dom'),
@@ -12,13 +12,13 @@ jest.mock('react-router-dom', () => ({
 }))
 
 test('renders Welcome {firstName}! content', () => {
-    render(<Success />);
+    render(<UserRegistratonConfirmation />);
     const heading = screen.getByRole('heading', { name: /Welcome/i, name: /!/i });
     expect(heading).toBeInTheDocument();
 });
 
 test('renders helper Text', () => {
-    render(<Success />);
+    render(<UserRegistratonConfirmation />);
     const helperText1 = screen.getByText(/You have been registered for this awesome service./i, { selector: 'p' });
     expect(helperText1).toBeInTheDocument();
     const helperText2 = screen.getByText(/Please check your email listed below for instructions./i, { selector: 'p' });
@@ -27,7 +27,7 @@ test('renders helper Text', () => {
 });
 
 test('renders Sign In Button', () => {
-    render(<Success />);
+    render(<UserRegistratonConfirmation />);
     const signInButton = screen.getByText(/Sign In/i, { selector: 'button' });
     expect(signInButton).toBeInTheDocument();
 });
