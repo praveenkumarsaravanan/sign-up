@@ -13,11 +13,11 @@ const UserRegistraton = () => {
         email: '',
     });
 
-    /* Navigate hook used to redirect to the UserRegistrationConfirmation component */
+    /* Navigate hook used to redirect to the SignUpConfirmation component */
     const navigate = useNavigate();
 
     /*
-        Handles Redirect to the /success page and pass firstName & email address to the UserRegistrationConfirmation component
+        Handles Redirect to the /success page and pass firstName & email address to the SignUpConfirmation component
     */
     const handleOnSubmit = event => {
         /* Tests throw console Error if preventDefault is called */
@@ -42,34 +42,34 @@ const UserRegistraton = () => {
     return (
         <Layout
             header={
-                <Header i18nKey="userRegistration.heading" heading1="Let's" heading2="Sign Up" />
+                <Header i18nKey="signUp.heading" heading1="Let's" heading2="Sign Up" />
             }
             main={
                 <div>
-                    <HelperText helperText1="userRegistration.helperText" />
+                    <HelperText helperText1="signUp.helperText" />
                     <form onSubmit={handleOnSubmit}>
                         <fieldset>
-                            <legend><Trans i18nKey="userRegistration.registrationFormLegend" /></legend>
+                            <legend><Trans i18nKey="signUp.registrationFormLegend" /></legend>
                                 <div className="form-field">
                                     <label>
-                                        <strong><Trans i18nKey="userRegistration.firstName" /></strong>
+                                        <strong><Trans i18nKey="signUp.firstName" /></strong>
                                         <input autoFocus id="firstName" type="text" label="First Name" name="firstName" value={user.firstName} onChange={handleChange} required aria-required data-testid="firstName" />
                                     </label>
                                 </div>
                                 <div className="form-field">
                                     <label>
-                                        <strong><Trans i18nKey="userRegistration.emailAddress" /></strong>
+                                        <strong><Trans i18nKey="signUp.emailAddress" /></strong>
                                         <input id="email" type="email" label="Email Address" name="email" value={user.email} onChange={handleChange} required aria-required data-testid="email" />
                                     </label>
                                 </div>
                                 <div className="form-field">
                                     <label>
-                                        <strong><Trans i18nKey="userRegistration.password" /></strong>
+                                        <strong><Trans i18nKey="signUp.password" /></strong>
                                         <input id="password" type="password" label="Password" name="password" value={user.password} onChange={handleChange} required aria-required data-testid="password" />
                                     </label>
                                 </div>
                         </fieldset>
-                        <button type="submit" value="Submit" className="btn btn-red btn-right" data-testid="signUpButton"><Trans i18nKey="userRegistration.SignUp" /></button>
+                        <button type="submit" value="Submit" className="btn btn-red btn-right" data-testid="signUpButton"><Trans i18nKey="signUp.SignUp" /></button>
                     </form>
                 </div>
             }

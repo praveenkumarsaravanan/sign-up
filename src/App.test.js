@@ -5,21 +5,21 @@ import userEvent from '@testing-library/user-event';
 import i18n from './i18n';
 import { I18nextProvider } from 'react-i18next';
 
-const appWrapper= () => {
+const AppWrapper= () => {
     return <I18nextProvider i18n={i18n}><App /></I18nextProvider>
 }
 
 afterEach(cleanup)
 
 it('render Sign Up Page', () => {
-  render(appWrapper(), {wrapper: BrowserRouter});
+  render(AppWrapper(), {wrapper: BrowserRouter});
   // verify page content for expected route
   expect(screen.getByRole('heading', { name: /Let's/i, name: /Sign up/i })).toBeInTheDocument();
 })
 
 it('Sign up for the service and render User Registration Confirmation screen', () => {
 
-  render(appWrapper(), {wrapper: BrowserRouter});
+  render(AppWrapper(), {wrapper: BrowserRouter});
   // Extract the textbox component
   const firstNameElement = screen.getByTestId(/firstName/i);
   // Simulate typing 'PRAVEEN KUMAR'

@@ -1,5 +1,5 @@
 import { render, screen } from '@testing-library/react';
-import UserRegistraton from './UserRegistraton';
+import SignUp from './SignUp';
 import userEvent from '@testing-library/user-event';
 import i18n from '../i18n';
 import { I18nextProvider } from 'react-i18next';
@@ -13,12 +13,12 @@ jest.mock('react-router-dom', () => ({
   }),
 }))
 
-const userRegistrationComponent = () => {
-  return <I18nextProvider i18n={i18n}><UserRegistraton /></I18nextProvider>
+const SignUpComponent = () => {
+  return <I18nextProvider i18n={i18n}><SignUp /></I18nextProvider>
 }
 
 test('Sign Up using the Service', () => { 
-  render(userRegistrationComponent());
+  render(SignUpComponent());
   // Extract the textbox component
   const firstNameElement = screen.getByTestId(/firstName/i);
   // Simulate typing 'PRAVEEN KUMAR'
@@ -44,7 +44,7 @@ test('Sign Up using the Service', () => {
 });
 
 test('renders all Input elements along with Labels', () => {
-  render(userRegistrationComponent());
+  render(SignUpComponent());
 
   const firstNameLabel = screen.getByLabelText(/First Name/i);
   expect(firstNameLabel).toBeInTheDocument();
@@ -63,22 +63,22 @@ test('renders all Input elements along with Labels', () => {
 
 });
 
-test('renders helper Text', () => {
-  render(userRegistrationComponent());
+test('SignUp: renders helper Text', () => {
+  render(SignUpComponent());
   const helperText = screen.getByText(/Use the form below to sign up for this super awesome service. You're only a few steps away!/i, { selector: 'p' });
   expect(helperText).toBeInTheDocument();
 });
 
 
-test('renders Lets Sign Up Text', () => {
-  render(userRegistrationComponent());
+test('SignUp: renders Lets Sign Up Text', () => {
+  render(SignUpComponent());
   const heading = screen.getByRole('heading', { name: /Let's/i, name: /Sign up/i });
   expect(heading).toBeInTheDocument();
 });
 
 
-test('renders UserRegistraton Button', () => {
-  render(userRegistrationComponent());
+test('SignUp: renders SignUp Button', () => {
+  render(SignUpComponent());
   const signUpButton = screen.getByText(/Sign Up/i, { selector: 'button' });
   expect(signUpButton).toBeInTheDocument();
 });
