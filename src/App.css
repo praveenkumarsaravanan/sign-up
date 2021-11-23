@@ -34,10 +34,6 @@ input {
   float: right;
 }
 
-.txt-bold {
-  font-weight: bold;
-}
-
 .header-title-block {
   display: block;
 }
@@ -88,7 +84,7 @@ h1 {
 .form-field {
   font-size: 1em;
   margin: 1em 0em 0.5em 0em;
-  font-weight: bold;
+  /* font-weight: bold; */
 }
 
 @media screen and (max-width: 450px) {

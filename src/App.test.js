@@ -2,18 +2,24 @@ import { render, cleanup, screen } from '@testing-library/react';
 import App from './App';
 import { BrowserRouter } from 'react-router-dom';
 import userEvent from '@testing-library/user-event';
+import i18n from './i18n';
+import { I18nextProvider } from 'react-i18next';
+
+const appWrapper= () => {
+    return <I18nextProvider i18n={i18n}><App /></I18nextProvider>
+}
 
 afterEach(cleanup)
 
 it('render Sign Up Page', () => {
-  render(<App />, {wrapper: BrowserRouter});
+  render(appWrapper(), {wrapper: BrowserRouter});
   // verify page content for expected route
   expect(screen.getByRole('heading', { name: /Let's/i, name: /Sign up/i })).toBeInTheDocument();
 })
 
 it('Sign up for the service and render User Registration Confirmation screen', () => {
 
-  render(<App />, {wrapper: BrowserRouter});
+  render(appWrapper(), {wrapper: BrowserRouter});
   // Extract the textbox component
   const firstNameElement = screen.getByTestId(/firstName/i);
   // Simulate typing 'PRAVEEN KUMAR'
@@ -47,12 +53,10 @@ it('Sign up for the service and render User Registration Confirmation screen', (
   const helperText2 = screen.getByText(/Please check your email listed below for instructions./i, { selector: 'p' });
   expect(helperText2).toBeInTheDocument();
 
-  const emailAddress = screen.getByText(/be.praveen@gmail.com/i, { selector: 'p' });
+  const emailAddress = screen.getByText(/be.praveen@gmail.com/i, { selector: 'strong' });
   expect(emailAddress).toBeInTheDocument();
 
   const signInButton = screen.getByText(/Sign In/i, { selector: 'button' });
   expect(signInButton).toBeInTheDocument();
 
 })
-
-
