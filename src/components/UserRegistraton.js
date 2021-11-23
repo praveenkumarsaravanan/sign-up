@@ -42,7 +42,7 @@ const UserRegistraton = () => {
     return (
         <Layout
             header={
-                <Header i18nKey={"userRegistration.heading"} heading1={"Let's"} heading2={"Sign Up 11"} />
+                <Header i18nKey="userRegistration.heading" heading1="Let's" heading2="Sign Up" />
             }
             main={
                 <div>

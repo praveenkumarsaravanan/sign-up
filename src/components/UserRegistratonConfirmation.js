@@ -15,7 +15,7 @@ const UserRegistratonConfirmation = () => {
         state ?
             <Layout
                 header={
-                    <Header i18nKey={"userRegistrationConfirmation.heading"} heading1="Welcome" heading2={{ name: state.firstName }} />
+                    <Header i18nKey="userRegistrationConfirmation.heading" heading1="Welcome" heading2={{ name: state.firstName }} />
                 }
                 main={
                     <div>

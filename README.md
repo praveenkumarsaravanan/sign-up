@@ -6,6 +6,14 @@ This is a responsive web app for the Sign Up service, where a user can register 
 
 <br/>
 
+## Technology Stack
+
+* React 17
+* Javascript
+* HTML
+* CSS
+* React Testing
+
 ## To run this service in local / development environment
 
 In the project directory, run:
@@ -50,7 +58,16 @@ Sign Up app is ready to be deployed!
 <br/>
 
 ## To deploy to Github Pages
-In the project directory, run:
+
+[Step1 & Step2 are needed, to match the url requirments in the guide and this can be removed later
+]
+*Step 1:* Update package.json with homepage attribute as below
+### `"homepage": "https://praveenksaravanan.github.io/sign-up"`
+
+*Step 2:* Update index.js router with basename attribute. 
+### `<Router basename={process.env.PUBLIC_URL} >`
+
+*Step 3:* In the project directory, run:
 
 ### `npm run deploy`
 

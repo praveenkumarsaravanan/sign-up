@@ -5,7 +5,7 @@ const HelperText = (props) => {
     return (
         <div className="txt">
             <p><Trans i18nKey={props.helperText1} /></p>
-            {props.helperText2 ? <p><Trans i18nKey={props.helperText2}Î /></p> : null }
+            {props.helperText2 ? <p><Trans i18nKey={props.helperText2} /></p> : null }
         </div>
     );
 }
