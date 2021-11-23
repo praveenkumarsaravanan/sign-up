@@ -15,6 +15,10 @@ fieldset {
   border: 0px;
 }
 
+legend {
+  display: none;
+}
+
 input {
   min-width: 4vh;
   min-height: 4vh;
@@ -25,8 +29,8 @@ input {
 }
 
 .btn-red {
-  border-color: #ff0000;
-  background-color: #ff0000;
+  border-color: #B30000;
+  background-color: #B30000;
   color: #ffffff;
 }
 

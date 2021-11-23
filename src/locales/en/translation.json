@@ -5,7 +5,8 @@
         "SignUp": "Sign Up",
         "firstName": "First Name",
         "emailAddress": "Email Address",
-        "password": "Password"
+        "password": "Password",
+        "registrationFormLegend": "Enter your details to sign up for the service"
 
     },
     "userRegistrationConfirmation": {
