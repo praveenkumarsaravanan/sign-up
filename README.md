@@ -2,7 +2,7 @@
 
 ## Published at https://praveenksaravanan.github.io/sign-up
 
-This is a responsive web app for the Sign Up service, where a user can register for an imaginary application. It consists of Sign Up feature and a confirmation based on the registration.
+This is a responsive web app for the Sign Up service, where a user can register for an imaginary application. It consists of Sign Up feature and supports internationalization(118n).
 
 <br/>
 
