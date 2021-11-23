@@ -28,7 +28,7 @@ i18n
         'en-US':['en'],
         default:['en']
     },
-    debug: true,
+    debug: false,
     defaultNS: 'translation',
     ns: 'translation',
     lng: "en",
