@@ -19,4 +19,3 @@ test('HelperText : renders the helper text content with two props', () => {
     const helperText2 = screen.getByText(/Please check your email listed below for instructions./i, { selector: 'p' });
     expect(helperText2).toBeInTheDocument();
 });
-

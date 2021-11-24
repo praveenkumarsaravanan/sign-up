@@ -4,6 +4,7 @@ import { Trans } from 'react-i18next';
 import Layout from './Layout';
 import Header from './Header';
 import HelperText from './HelperText';
+import TextBox from '../hoc/TextBox';
 
 const UserRegistraton = () => {
 
@@ -50,24 +51,9 @@ const UserRegistraton = () => {
                     <form onSubmit={handleOnSubmit}>
                         <fieldset>
                             <legend><Trans i18nKey="signUp.registrationFormLegend" /></legend>
-                                <div className="form-field">
-                                    <label>
-                                        <strong><Trans i18nKey="signUp.firstName" /></strong>
-                                        <input autoFocus id="firstName" type="text" label="First Name" name="firstName" value={user.firstName} onChange={handleChange} required aria-required data-testid="firstName" />
-                                    </label>
-                                </div>
-                                <div className="form-field">
-                                    <label>
-                                        <strong><Trans i18nKey="signUp.emailAddress" /></strong>
-                                        <input id="email" type="email" label="Email Address" name="email" value={user.email} onChange={handleChange} required aria-required data-testid="email" />
-                                    </label>
-                                </div>
-                                <div className="form-field">
-                                    <label>
-                                        <strong><Trans i18nKey="signUp.password" /></strong>
-                                        <input id="password" type="password" label="Password" name="password" value={user.password} onChange={handleChange} required aria-required data-testid="password" />
-                                    </label>
-                                </div>
+                            <TextBox autoFocus i18nKey="signUp.firstName" label  id="firstName" type="text" name="firstName" value={user.firstName} onChange={handleChange} required aria-required data-testid="firstName" />
+                            <TextBox i18nKey="signUp.emailAddress" label id="email" type="email" name="email" value={user.email} onChange={handleChange} required aria-required data-testid="email" />
+                            <TextBox i18nKey="signUp.password" label id="password" type="password" name="password" value={user.password} onChange={handleChange} required aria-required data-testid="password" />
                         </fieldset>
                         <button type="submit" value="Submit" className="btn btn-red btn-right" data-testid="signUpButton"><Trans i18nKey="signUp.SignUp" /></button>
                     </form>
